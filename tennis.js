@@ -41,33 +41,61 @@ function updateSets() {
 
 // Increase Player Points
 document.getElementById("increaseP1Point").addEventListener('click', function() {
-    playerOneScore += 15;
+    if (playerOneScore === 0) {
+        playerOneScore = 15;
+    } else if (playerOneScore === 15) {
+        playerOneScore = 30;
+    } else if (playerOneScore === 30) {
+        playerOneScore = 40;
+    } else if (playerOneScore === 40) {
+        playerOneScore = 'AD';
+    }
     updateScores();
 });
 
 document.getElementById("increaseP2Point").addEventListener('click', function() {
-    playerTwoScore += 15;
+    if (playerTwoScore === 0) {
+        playerTwoScore = 15;
+    } else if (playerTwoScore === 15) {
+        playerTwoScore = 30;
+    } else if (playerTwoScore === 30) {
+        playerTwoScore = 40;
+    } else if (playerTwoScore === 40) {
+        playerTwoScore = 'AD';
+    }
     updateScores();
 });
 
 // Increase player games that have been won
 document.getElementById("addp1Game").addEventListener('click', function() {
+    if (playerOneGameScore === 7) {
+        return;
+    }
     playerOneGameScore++;
     updateGames();
 });
 
 document.getElementById("addp2Game").addEventListener('click', function() {
+    if (playerTwoGameScore === 7) {
+        return;
+    }
     playerTwoGameScore++;
     updateGames();
 });
 
 // Increase player sets that have been won
 document.getElementById("addp1Set").addEventListener('click', function() {
+    if (playerOneSetScore === 3) {
+        return;
+    }
     playerOneSetScore++;
     updateSets();
 });
 
 document.getElementById("addP2Set").addEventListener('click', function() {
+    if (playerTwoSetScore === 3) {
+        return;
+    }
     playerTwoSetScore++;
     updateSets();
 });

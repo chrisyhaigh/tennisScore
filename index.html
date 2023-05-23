@@ -17,54 +17,56 @@
 <body>
     <!------SCOREBOARD------>
     <div class="container rounded" id="scoreboard">
-        <div class="row p-2">
-            <div class="col-4 text-white">
-                <p>Player</p>
+        <div class="row p-2 m-0">
+            <div class="col-3 text-white">
+                <p class="text-left">Player</p>
             </div>
             <div class="col-2 text-white">
-                <p>Current</p>
+                <p class="text-left">Current</p>
             </div>
-            <div class="col-3 text-white">
-                <p>Games</p>
+            <div class="col-2 text-white">
+                <p class="text-left">Games</p>
             </div>
-            <div class="col-3 text-white">
-                <p>Sets</p>
+            <div class="col-2 text-white">
+                <p class="text-left">Sets</p>
             </div>
         </div>
-        <div class="row mt-1 mb-5">
-            <div class="col-4" id="player-name-1">
-                <p class="bg-dark text-warning text-center p-2">Player One</p>
+        <div class="row mt-1 mb-3">
+            <div class="col-3" id="player-name-1">
+                <p class="bg-dark text-warning text-center">Player One</p>
             </div>
             <div class="col-2">
-                <p id="playeronepoint" class="bg-dark text-warning text-center pb-3">0</p> 
+                <p id="playeronepoint" class="bg-dark text-warning text-center">0</p> 
             </div>
-            <div class="col-3 bg-dark text-warning text-center" id="playeronegames">
-                <p>0</p>
+            <div class="col-2">
+                <p class="bg-dark text-warning text-center" id="playeronegames">0</p>
             </div>
-            <div class="col-3 bg-dark text-warning text-center" id="playeronesets">
-                <p>0</p>
+            <div class="col-2">
+                <p class="bg-dark text-warning text-center" id="playeronesets">0</p>
             </div>
+            <div class="col-3"></div> <!-- Empty column for alignment -->
         </div>
         <div class="row">
-            <div class="col-4" id="player-name-2">
-                <p class="bg-dark text-warning text-center p-2">Player Two</p>
+            <div class="col-3" id="player-name-2">
+                <p class="bg-dark text-warning text-center">Player Two</p>
             </div>
             <div class="col-2">
-                <p id="playertwopoint" class="bg-dark text-warning text-center pb-3">0</p>
+                <p id="playertwopoint" class="bg-dark text-warning text-center">0</p>
             </div>
-            <div class="col-3 bg-dark text-warning text-center" id="playertwogames">
-                <p>0</p>
+            <div class="col-2">
+                <p class="bg-dark text-warning text-center" id="playertwogames">0</p>
             </div>
-            <div class="col-3 bg-dark text-warning text-center" id="playertwosets">
-                <p>0</p>
+            <div class="col-2">
+                <p class="bg-dark text-warning text-center" id="playertwosets">0</p>
             </div>
+            <div class="col-3"></div> <!-- Empty column for alignment -->
         </div>
     </div>
 
     <!-----Points/Player Names Controls-->
 
-    <div class="container mt-4 rounded" id="controls">
-        <div class="row p-4 d-flex justify-content-center">
+    <div class="container mt-2 rounded" id="controls">
+        <div class="row p-4 justify-content-center">
             <button id="increaseP1Point">P1 Point +</button>
             <button id="increaseP2Point">P2 Point +</button>
             <button id="addp1Game">P1 Game +</button>

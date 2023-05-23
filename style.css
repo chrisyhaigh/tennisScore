@@ -5,13 +5,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 70vh;
 }
   
   .container#scoreboard {
-    height: 15rem;
-    width: 50rem;
-    background-color: rgb(11, 71, 11);
+    height: 12rem;
+    width: 40rem;
+    background-color: rgb(5, 54, 5);
 }
 
 
@@ -19,14 +19,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8rem;
-    width: 50rem;
-    background-color: rgb(11, 71, 11);
+    height: 11rem;
+    width: 40rem;
+    background-color: rgb(5, 54, 5);
 }
   
   button {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 60%;
     padding: 1rem;
@@ -37,7 +37,7 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
   
   button:hover {
