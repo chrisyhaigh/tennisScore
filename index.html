@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Scoreboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Orbitron&family=Poppins&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans&family=Orbitron&family=Poppins&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!------SCOREBOARD------>
+    <div class="container rounded" id="scoreboard">
+        <div class="row p-2">
+            <div class="col-4 text-white">
+                <p>Player</p>
+            </div>
+            <div class="col-2 text-white">
+                <p>Current</p>
+            </div>
+            <div class="col-3 text-white">
+                <p>Games</p>
+            </div>
+            <div class="col-3 text-white">
+                <p>Sets</p>
+            </div>
+        </div>
+        <div class="row mt-1 mb-5">
+            <div class="col-4" id="player-name-1">
+                <p class="bg-dark text-warning text-center p-2">Player One</p>
+            </div>
+            <div class="col-2">
+                <p id="playeronepoint" class="bg-dark text-warning text-center pb-3">0</p> 
+            </div>
+            <div class="col-3 bg-dark text-warning text-center" id="playeronegames">
+                <p>0</p>
+            </div>
+            <div class="col-3 bg-dark text-warning text-center" id="playeronesets">
+                <p>0</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" id="player-name-2">
+                <p class="bg-dark text-warning text-center p-2">Player Two</p>
+            </div>
+            <div class="col-2">
+                <p id="playertwopoint" class="bg-dark text-warning text-center pb-3">0</p>
+            </div>
+            <div class="col-3 bg-dark text-warning text-center" id="playertwogames">
+                <p>0</p>
+            </div>
+            <div class="col-3 bg-dark text-warning text-center" id="playertwosets">
+                <p>0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-----Points/Player Names Controls-->
+
+    <div class="container mt-4 rounded" id="controls">
+        <div class="row p-4 d-flex justify-content-center">
+            <button id="increaseP1Point">P1 Point +</button>
+            <button id="increaseP2Point">P2 Point +</button>
+            <button id="addp1Game">P1 Game +</button>
+            <button id="addp2Game">P2 Game +</button>
+            <button id="addp1Set">P1 Set +</button>
+            <button id="addP2Set">P2 Set +</button>
+            <button id="deuce">Deuce</button>
+            <button id="resetScore">Reset</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="tennis.js"></script>
+</body>
+</html>
