@@ -37,28 +37,73 @@ function updateGames() {
 function updateSets() {
     playerOneSetCount.textContent = playerOneSetScore;
     playerTwoSetCount.textContent = playerTwoSetScore;
-}
+};
 
+// Increase Player Points
 document.getElementById("increaseP1Point").addEventListener('click', function() {
     playerOneScore += 15;
-    if (playerOneScore === 40) {
-        return;
-    }
+    updateScores();
 });
 
 document.getElementById("increaseP2Point").addEventListener('click', function() {
     playerTwoScore += 15;
-    if (playerTwoScore === 40) {
-        return;
-    }
+    updateScores();
 });
 
+// Increase player games that have been won
+document.getElementById("addp1Game").addEventListener('click', function() {
+    playerOneGameScore++;
+    updateGames();
+});
+
+document.getElementById("addp2Game").addEventListener('click', function() {
+    playerTwoGameScore++;
+    updateGames();
+});
+
+// Increase player sets that have been won
+document.getElementById("addp1Set").addEventListener('click', function() {
+    playerOneSetScore++;
+    updateSets();
+});
+
+document.getElementById("addP2Set").addEventListener('click', function() {
+    playerTwoSetScore++;
+    updateSets();
+});
+
+// If both players are on 40-40
 document.getElementById('deuce').addEventListener('click', function() {
     playerOneScore = 40;
     playerTwoScore = 40;
+    updateScores();
 });
 
-document.getElementById('resetScore').addEventListener('click', function() {
+// Reset player scores for next game
+document.getElementById('resetscore').addEventListener('click', function() {
     playerOneScore = 0;
     playerTwoScore = 0;
-})
+    updateScores();
+});
+
+document.getElementById('resetgame').addEventListener('click', function() {
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    playerOneGameScore = 0;
+    playerTwoGameScore = 0;
+    updateScores();
+    updateGames();
+});
+
+document.getElementById('reset').addEventListener('click', function() {
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    playerOneGameScore = 0;
+    playerTwoGameScore = 0;
+    playerOneSetScore = 0;
+    playerTwoSetScore = 0;
+    updateScores();
+    updateGames();
+    updateSets();
+});
+
